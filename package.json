@@ -1,0 +1,32 @@
+{
+  "name": "tajiri-mpesa-password",
+  "version": "1.0.0",
+  "description": "Mpesa Password Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arthur-codeX/tajiri-mpesa-password.git"
+  },
+  "keywords": [
+    "Mpesa",
+    "mpesa-password",
+    "'mpesa",
+    "pasword'"
+  ],
+  "author": "Arthur-codeX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arthur-codeX/tajiri-mpesa-password/issues"
+  },
+  "homepage": "https://github.com/Arthur-codeX/tajiri-mpesa-password#readme",
+  "dependencies": {
+    "nodejs-base64-encode": "^1.1.0",
+    "tajiri-mpesa-time": "^1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}
