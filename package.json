@@ -23,8 +23,9 @@
   },
   "homepage": "https://github.com/Arthur-codeX/tajiri-mpesa-password#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "nodejs-base64-encode": "^1.1.0",
-    "tajiri-mpesa-time": "^1.0.0"
+    "tajiri-mpesa-time": "^2.0.0"
   },
   "devDependencies": {
     "jest": "^28.1.0"

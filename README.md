@@ -24,61 +24,52 @@ npm install tajiri-mpesa-password
 
 ### Usage
 
-    const  pass = require("tajiri-mpesa-password");
+<mark> using Async await</mark>
+
+```javascript
+const mpesaPassword = require("tajiri-mpesa-password");
 
 const conf = {
-
-BUSINESS_SHORT_CODE: 34546456,
-
-PASS_KEY: "dsadnaskljnjsdnjfnsdjgnfkgdngdf",
-
+  BUSINESS_SHORT_CODE: 174379,
+  PASS_KEY: "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
 };
 
-/\*\*
+const pass = async () => {
+  pass = await mpesaPassword(conf);
+  console.log(pass);
+};
+```
 
-- [Generate the mpesa key and time stamp]
+<mark>using Promises</mark>
 
-- @param {[object]} conf [Pass A object containg: {
+```javascript
+const mpesaPassword = require("tajiri-mpesa-password");
 
-BUSINESS_SHORT_CODE: 34546456,
+const conf = {
+  BUSINESS_SHORT_CODE: 174379,
+  PASS_KEY: "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
+};
 
-PASS_KEY: "dsadnaskljnjsdnjfnsdjgnfkgdngdf",
+mpesaPassword(conf).then((pass) => {
+  console.log(pass);
+});
+```
 
-}; ]
+<mark>return</mark>
 
-- @param {[date]} time [This is the mpesa time.
+```javascript
+{
+  time: '20220608000315',
+  password: 'MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjIwNjA4MDAwMzE1'
+ }
+```
 
-Should be based on daraja format. This is created automatically but you can pass it]
+---
 
-- @return {[number]} gmt [This is the gmt ofset in hours.]
-
-- \*\*/
-
-console.log(pass(conf));
+> You can pass the mpesa time stmap in required format as the second argument. This is not required since the time stamp used is Africa Nairobi And is correctly formated as per daraja requirements.
 
 ## References
 
 > get the application credentials from daraja
 
 [daraja]](https://developer.safaricom.co.ke/)
-const pass = require("tajiri-mpesa-password");
-
-const conf = {
-BUSINESS_SHORT_CODE: 34546456,
-PASS_KEY: "dsadnaskljnjsdnjfnsdjgnfkgdngdf",
-};
-
-/\*\*
-
-- [Generate the mpesa key and time stamp]
-- @param {[object]} conf [Pass A object containg: {
-  BUSINESS_SHORT_CODE: 34546456,
-  PASS_KEY: "dsadnaskljnjsdnjfnsdjgnfkgdngdf",
-  }; ]
-
-- @param {[date]} time [This is the mpesa time.
-  Should be based on daraja format. This is created automatically but you can pass it]
-- @return {[number]} gmt [This is the gmt ofset in hours.]
-- \*\*/
-
-console.log(pass(conf));
