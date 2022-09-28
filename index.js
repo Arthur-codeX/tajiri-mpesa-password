@@ -1,9 +1,9 @@
 const time = require("tajiri-mpesa-time");
 const encode = require("nodejs-base64-encode");
 
-const Password = async (conf, t = null) => {
+const Password = (conf, t = null) => {
   if (t == null) {
-    t = await time();
+    t = time();
   }
 
   let data = `${conf.BUSINESS_SHORT_CODE}${conf.PASS_KEY}${t}`;
